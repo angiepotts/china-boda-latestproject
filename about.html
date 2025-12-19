@@ -1,0 +1,478 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>China Boda | About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="about-page">
+  <!-- Header --> 
+    <header class="header">
+    <div class="logo">
+      <img src="images/LOGO CHINA BODA.png" alt="China Boda Logo">
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="menu-bar">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-item">HOME</a></li>
+        <li><a href="about.html" class="menu-item">ABOUT</a></li>
+        <li><a href="#" class="menu-item">SERVICES</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="header-btn battery-finder-header-btn">FIND YOUR BATTERY</button> 
+      <button class="header-btn secondary">Contact</button> 
+    </div>
+  </header>
+  
+  <!-- Battery Finder Form -->
+  <div id="batteryFinderForm" class="battery-finder-form">
+    <div class="battery-finder-content">
+      <h3>Find Your Battery</h3>
+      <label>Vehicle Category</label>
+      <select id="vehicleCategory" onchange="loadMakes()">
+        <option value="">Select Category</option>
+        <option value="car">Car</option>
+        <option value="truck">Truck</option>
+        <option value="suv">SUV</option>
+        <option value="van">Van</option>
+        <option value="motorcycle">Motorcycle</option>
+        <option value="bus">Bus</option>
+      </select>
+      <label>Car Make</label>
+      <select id="carMake" onchange="loadModels()">
+        <option value="">Select Make</option>
+      </select>
+      <label>Car Model</label>
+      <select id="carModel">
+        <option value="">Select Model</option>
+      </select>
+      <button class="find-battery-btn" onclick="findBattery()">FIND BATTERY</button>
+      <button class="close-form-btn" onclick="toggleBatteryFinder()">Close</button>
+    </div>
+  </div>
+  
+  <!-- About Content -->  <section class="about">
+    <div class="about-text">
+      <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
+      <h2>CHINA BODA TECHNICAL GROUP CO.LTD</h2>
+      <p>
+        China Boda Technology Group Co. Ltd. (hereinafter referred to as "the Company") is a production and sales enterprise legally registered and established in Tanzania. The main business of the Company is the production and sales of regenerated lead and lead-acid batteries.
+      </p>
+      <div class="about-features">
+        <div class="about-feature-item">
+          <i class="fa fa-globe"></i>
+          <div>
+            <h5>BRANCHES IN TANZANIA</h5>
+            <p>China Boda serves customers through its various branches in major cities such as Dar es Salaam, Arusha, Dodoma, Mbeya and Mwanza. The company offers a wide range of car batteries, battery replacement services, and customer advice on the best batteries for their vehicles.</p>
+          </div>
+        </div>
+        <div class="about-feature-item">
+          <i class="fa fa-shipping-fast"></i>
+          <div>
+            <h5>On Time Delivery</h5>
+            <p>Our products can reach every corners of Tanzania on the right setted time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="factory">
+      <img src="images/white-semi-truck-driving-highway-sunny-sky.jpg" alt="China Boda">
+      <h3>CHINA BODA TECHNICAL GROUP CO.LTD</h3>
+      <p>
+        <i class="fa fa-map-marker-alt"></i> Kibaha Tan Industrial area, Pwani Tanzania<br>
+        <i class="fa fa-phone-alt"></i> +255 696 474 770<br>
+        <i class="fa fa-envelope"></i> info@Chinaboda.co.tz
+  </p>
+</div>
+  </section>
+
+  <!-- Facts Section -->
+  <section class="facts-section">
+    <div class="facts-content">
+      <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
+      <h2>#1 All the time, we insist on that a united team the basic guarantee of high-quality product.</h2>
+      <p>
+        Our products are mainly automotive starting lead-acid batteries, and the product models can be used for passenger cars and trucks of Japanese, German, and American brands. The product models range from N36 to N200, which are suitable for small cars, light trucks, heavy trucks, construction machinery, and agricultural machinery.
+      </p>
+      <div class="contact-call">
+        <i class="fa fa-headphones"></i>
+        <div>
+          <h6>Call for any query!</h6>
+          <h3>+255 696 474 770</h3>
+        </div>
+      </div>
+    </div>
+    <div class="facts-stats">
+      <div class="fact-stat-item">
+        <i class="fa fa-users"></i>
+        <h2>1234</h2>
+        <p>Happy Clients</p>
+      </div>
+      <div class="fact-stat-item">
+        <i class="fa fa-ship"></i>
+        <h2>1234</h2>
+        <p>Complete Delivery</p>
+      </div>
+      <div class="fact-stat-item">
+        <i class="fa fa-star"></i>
+        <h2>1234</h2>
+        <p>Customer Reviews</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="features-content">
+      <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
+      <h2>We Are Trusted Logistics Company Since 2019</h2>
+      <div class="feature-item">
+        <i class="fa fa-globe"></i>
+        <div>
+          <h5>Worldwide Service</h5>
+          <p>we supply our products Worldwide, And our trusted products are guaranteed and waranteed hence trustworthy</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa fa-shipping-fast"></i>
+        <div>
+          <h5>On Time Delivery</h5>
+          <p>We Deliver our products on time in a perfect state,and yes our products are Transported in a comfortable means.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa fa-headphones"></i>
+        <div>
+          <h5>24/7 Telephone Support</h5>
+          <p>Feel free to contact us all day ,every time.</p>
+        </div>
+      </div>
+    </div>
+    <div class="features-image">
+      <img src="images/white-semi-truck-driving-highway-sunny-sky.jpg" alt="Features">
+    </div>
+  </section>
+
+
+  <!-- Team Section -->
+  <section class="team">
+    <h6 class="text-secondary text-uppercase mb-3">Our Team</h6>
+    <h2>Expert Team Members</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="team-image">
+          <img src="images/newpic.png" alt="Marketing">
+        </div>
+        <h5>Marketing</h5>
+        <p>Designation</p>
+        <div class="team-social">
+          <a href="https://www.facebook.com/share/15xuSajxLJ/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/wenon_battery_tz?utm_source=qr&igsh=dWZsem40bHlwMnZx"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-image">
+          <img src="images/newpic.png" alt="Stake-holder">
+        </div>
+        <h5>Stake-holder</h5>
+        <p>Designation</p>
+        <div class="team-social">
+          <a href="https://www.facebook.com/share/15xuSajxLJ/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/wenon_battery_tz?utm_source=qr&igsh=dWZsem40bHlwMnZx"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-image">
+          <img src="images/newpic.png" alt="Staff">
+        </div>
+        <h5>Staff</h5>
+        <p>Designation</p>
+        <div class="team-social">
+          <a href="https://www.facebook.com/share/15xuSajxLJ/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/wenon_battery_tz?utm_source=qr&igsh=dWZsem40bHlwMnZx"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-image">
+          <img src="images/newpic.png" alt="Engineers">
+        </div>
+        <h5>Engineers</h5>
+        <p>Designation</p>
+        <div class="team-social">
+          <a href="https://www.facebook.com/share/15xuSajxLJ/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/wenon_battery_tz?utm_source=qr&igsh=dWZsem40bHlwMnZx"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fa fa-map-marker-alt"></i> Kibaha Tan Industrial area, Pwani Tanzania</p>
+        <p><i class="fa fa-phone-alt"></i> +255 696 474 770</p>
+        <p><i class="fa fa-envelope"></i> info@Chinaboda.co.tz</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/15xuSajxLJ/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://whatsapp.com/dl/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/wenon_battery_tz?utm_source=qr&igsh=dWZsem40bHlwMnZx"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <a href="#">Air Freight</a>
+        <a href="#">Sea Freight</a>
+        <a href="#">Road Freight</a>
+        <a href="#">Logistic Solutions</a>
+        <a href="#">Industry solutions</a>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <a href="#">CHINA BODA TECHNICAL GROUP CO.LTD</a>, All Right Reserved.</p>
+      <p>Designed By <a href="tel:+255743157929">Boom Tech</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button for Mobile -->
+  <div class="floating-action-btn" id="floatingActionBtn">
+    <i class="fas fa-bolt"></i>
+  </div>
+  
+  <!-- Floating Action Menu -->
+  <div class="floating-action-menu" id="floatingActionMenu">
+    <button class="floating-menu-item" id="floatingBatteryBtn">
+      <i class="fas fa-battery-half"></i>
+      <span>Find Battery</span>
+    </button>
+    <button class="floating-menu-item" id="floatingContactBtn">
+      <i class="fas fa-phone"></i>
+      <span>Contact</span>
+    </button>
+  </div>
+
+</body>
+
+<!-- script.js -->
+  <script src="battery.js"></script>
+  <script>
+    console.log("China Boda About Page Loaded");
+    
+    // Menu toggle functionality for about page
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuBar = document.querySelector('.menu-bar');
+    const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+    const menuLinks = document.querySelectorAll('.menu-list a, .menu-item');
+    const headerButtons = document.querySelectorAll('.header-btn');
+
+    const closeMenu = () => {
+        menuBar.classList.remove('open');
+        menuToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.querySelectorAll('.has-dropdown').forEach(item => item.classList.remove('dropdown-open'));
+    };
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuBar.classList.toggle('open');
+            menuToggle.classList.toggle('active', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
+            if (isOpen && window.innerWidth <= 900) {
+                document.querySelectorAll('.has-dropdown').forEach((item, index) => {
+                    if (index === 0) {
+                        item.classList.add('dropdown-open');
+                    } else {
+                        item.classList.remove('dropdown-open');
+                    }
+                });
+            } else {
+                document.querySelectorAll('.has-dropdown').forEach(item => item.classList.remove('dropdown-open'));
+            }
+        });
+    }
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            if (window.innerWidth <= 900) {
+                event.preventDefault();
+                const parent = link.parentElement;
+                parent.classList.toggle('dropdown-open');
+            }
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+        if (window.innerWidth <= 900 && menuBar.classList.contains('open')) {
+            document.querySelectorAll('.has-dropdown').forEach((item, index) => {
+                if (index === 0) {
+                    item.classList.add('dropdown-open');
+                }
+            });
+        }
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                closeMenu();
+            }
+        });
+    });
+
+    // Handle header buttons in mobile menu
+    headerButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (this.onclick) {
+                // If button has onclick, let it execute
+                return;
+            }
+            if (window.innerWidth <= 900) {
+                // Close menu after button click on mobile
+                setTimeout(() => {
+                    closeMenu();
+                }, 100);
+            }
+        });
+    });
+
+    // Ensure battery finder button works - both desktop and mobile
+    const batteryFinderBtn = document.querySelector('.battery-finder-header-btn');
+    if (batteryFinderBtn) {
+        batteryFinderBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (typeof toggleBatteryFinder === 'function') {
+                toggleBatteryFinder();
+            } else {
+                console.error('toggleBatteryFinder function not found');
+            }
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    closeMenu();
+                }, 100);
+            }
+        });
+        
+        // Also handle touch events for better mobile support
+        batteryFinderBtn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof toggleBatteryFinder === 'function') {
+                toggleBatteryFinder();
+            } else {
+                console.error('toggleBatteryFinder function not found');
+            }
+            if (window.innerWidth <= 900) {
+                setTimeout(() => {
+                    closeMenu();
+                }, 100);
+            }
+        });
+    }
+    
+    // Close menu when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 900) {
+            const isClickInsideMenu = menuBar && (menuBar.contains(e.target) || menuToggle.contains(e.target));
+            const isMenuOpen = menuBar && menuBar.classList.contains('open');
+            
+            if (isMenuOpen && !isClickInsideMenu) {
+                closeMenu();
+            }
+        }
+    });
+    
+    // Floating Action Button functionality
+    const floatingActionBtn = document.getElementById('floatingActionBtn');
+    const floatingActionMenu = document.getElementById('floatingActionMenu');
+    const floatingBatteryBtn = document.getElementById('floatingBatteryBtn');
+    const floatingContactBtn = document.getElementById('floatingContactBtn');
+    
+    if (floatingActionBtn && floatingActionMenu) {
+        floatingActionBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            floatingActionBtn.classList.toggle('active');
+            floatingActionMenu.classList.toggle('active');
+        });
+        
+        // Close floating menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 900) {
+                const isClickInsideFloating = (floatingActionBtn && floatingActionBtn.contains(e.target)) || 
+                                             (floatingActionMenu && floatingActionMenu.contains(e.target));
+                
+                if (!isClickInsideFloating && floatingActionMenu && floatingActionMenu.classList.contains('active')) {
+                    floatingActionBtn.classList.remove('active');
+                    floatingActionMenu.classList.remove('active');
+                }
+            }
+        });
+        
+        // Handle battery finder button
+        if (floatingBatteryBtn) {
+            floatingBatteryBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (typeof toggleBatteryFinder === 'function') {
+                    toggleBatteryFinder();
+                }
+                floatingActionBtn.classList.remove('active');
+                floatingActionMenu.classList.remove('active');
+            });
+            
+            floatingBatteryBtn.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (typeof toggleBatteryFinder === 'function') {
+                    toggleBatteryFinder();
+                }
+                floatingActionBtn.classList.remove('active');
+                floatingActionMenu.classList.remove('active');
+            });
+        }
+        
+        // Handle contact button
+        if (floatingContactBtn) {
+            floatingContactBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Add your contact functionality here
+                alert('Contact: +255 696 474 770\nEmail: info@Chinaboda.co.tz');
+                floatingActionBtn.classList.remove('active');
+                floatingActionMenu.classList.remove('active');
+            });
+            
+            floatingContactBtn.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Add your contact functionality here
+                alert('Contact: +255 696 474 770\nEmail: info@Chinaboda.co.tz');
+                floatingActionBtn.classList.remove('active');
+                floatingActionMenu.classList.remove('active');
+            });
+        }
+    }
+  </script>
+
+</html>

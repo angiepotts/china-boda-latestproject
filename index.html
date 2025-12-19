@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parent">
+        <!-- HERO / HOME SECTION -->
+        <div class="div1">
+            <div class="hero-slider">
+                <div class="slide slide-1"></div>
+                <div class="slide slide-2"></div>
+            </div>
+            <header class="header">
+                <div class="logo">
+                    <img src="images/LOGO CHINA BODA.png" alt="China Boda Logo">
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="menu-bar">
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item">HOME</a></li>
+                        <li><a href="about.html" class="menu-item">ABOUT</a></li>
+                        <li><a href="#" class="menu-item">SERVICES</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="header-btn" onclick="toggleBatteryFinder()">FIND YOUR BATTERY</button> 
+                    <button class="header-btn secondary">Contact</button> 
+                </div>
+
+            </header>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-kicker">TRANSPORTANDO</span>
+                    <h1>confiança</h1>
+                    <p>
+                        Soluções em transporte rodoviário com foco em qualidade,
+                        segurança e confiança em cada entrega.
+                    </p>
+                </div>
+                <!-- Truck image on the left side of the hero -->
+                <img src="images/newpic.png" alt="Caminhão" class="floating-image">
+                <!-- Mobile Hero Buttons -->
+                <div class="hero-mobile-buttons">
+                    <button class="header-btn battery-finder-btn" onclick="toggleBatteryFinder()">FIND YOUR BATTERY</button>
+                    <button class="header-btn secondary">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- THREE FEATURE BOXES: QUALIDADE / SEGURANÇA / CONFIANÇA -->
+        <div class="div2">
+            <div class="feature-box">
+                <h3>QUALIDADE</h3>
+                <p>Processos rigorosos e equipe especializada para garantir excelência no transporte.</p>
+            </div>
+            <div class="feature-box">
+                <h3>SEGURANÇA</h3>
+                <p>Frota moderna e monitoramento constante para proteger cargas e pessoas.</p>
+            </div>
+            <div class="feature-box">
+                <h3>CONFIANÇA</h3>
+                <p>Parceria de longo prazo com clientes em todo o país.</p>
+            </div>
+        </div>
+
+        <!-- SEGURANÇA SECTION: IMAGE LEFT, TEXT RIGHT -->
+        <section class="safety-section">
+            <div class="div4">
+                <img src="images/white-semi-truck-driving-highway-sunny-sky.jpg"
+                     alt="Caminhão tanque na estrada"
+                     class="safety-image">
+            </div>
+            <div class="div5">
+                <div class="safety-content">
+                    <span class="section-line"></span>
+                    <h2>SEGURANÇA</h2>
+                    <p>
+                        Nossos veículos são equipados com tecnologia de ponta e passam por
+                        manutenções periódicas, garantindo segurança total no transporte de
+                        cargas em qualquer rota.
+                    </p>
+                    <p>
+                        Motoristas treinados, protocolos rígidos e monitoramento em tempo real
+                        fazem parte da nossa rotina de operações.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FROTA SECTION -->
+        <div class="div6">
+            <div class="fleet-overlay">
+                <h2>CONHEÇA NOSSA FROTA</h2>
+                <div class="fleet-grid">
+                    <div class="fleet-card">
+                        <div class="fleet-image-placeholder">Imagem 1</div>
+                        <h3>Modelo A</h3>
+                        <p>Ano 2015</p>
+                    </div>
+                    <div class="fleet-card">
+                        <div class="fleet-image-placeholder">Imagem 2</div>
+                        <h3>Modelo B</h3>
+                        <p>Ano 2016</p>
+                    </div>
+                    <div class="fleet-card">
+                        <div class="fleet-image-placeholder">Imagem 3</div>
+                        <h3>Modelo C</h3>
+                        <p>Ano 2017</p>
+                    </div>
+                </div>
+                <div class="fleet-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="div7">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Menu</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Quem Somos</a>
+                    <a href="#">Área de Atuação</a>
+                    <a href="#">Frota</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>Rua Exemplo, 123<br>São Paulo - SP<br>Brasil</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Localização</h3>
+                    <div class="social-links">
+                        <a href="#" class="location-btn">Ver no mapa</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Battery Finder Form - Popup (centered, away from header) -->
+    <div id="batteryFinderForm" class="battery-finder-form">
+        <div class="battery-finder-content">
+            <h3>Find Your Battery</h3>
+            <label>Vehicle Category</label>
+            <select id="vehicleCategory" onchange="loadMakes()">
+                <option value="">Select Category</option>
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="suv">SUV</option>
+                <option value="van">Van</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="bus">Bus</option>
+            </select>
+
+            <label>Car Make</label>
+            <select id="carMake" onchange="loadModels()">
+                <option value="">Select Make</option>
+            </select>
+
+            <label>Car Model</label>
+            <select id="carModel">
+                <option value="">Select Model</option>
+            </select>
+
+            <button class="find-battery-btn" onclick="findBattery()">FIND BATTERY</button>
+            <button class="close-form-btn" onclick="toggleBatteryFinder()">Close</button>
+        </div>
+    </div>
+
+    <script src="battery.js"></script>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuBar = document.querySelector('.menu-bar');
+        const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+
+        const menuLinks = document.querySelectorAll('.menu-list a');
+
+        const closeMenu = () => {
+            menuBar.classList.remove('open');
+            menuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.querySelectorAll('.has-dropdown').forEach(item => item.classList.remove('dropdown-open'));
+        };
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuBar.classList.toggle('open');
+            menuToggle.classList.toggle('active', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
+            if (isOpen && window.innerWidth <= 900) {
+                document.querySelectorAll('.has-dropdown').forEach((item, index) => {
+                    if (index === 0) {
+                        item.classList.add('dropdown-open');
+                    } else {
+                        item.classList.remove('dropdown-open');
+                    }
+                });
+            } else {
+                document.querySelectorAll('.has-dropdown').forEach(item => item.classList.remove('dropdown-open'));
+            }
+        });
+
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                if (window.innerWidth <= 900) {
+                    event.preventDefault();
+                    const parent = link.parentElement;
+                    parent.classList.toggle('dropdown-open');
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeMenu();
+            }
+            if (window.innerWidth <= 900 && menuBar.classList.contains('open')) {
+                document.querySelectorAll('.has-dropdown').forEach((item, index) => {
+                    if (index === 0) {
+                        item.classList.add('dropdown-open');
+                    }
+                });
+            }
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) {
+                    closeMenu();
+                }
+            });
+        });
+
+        // Ensure battery finder button works on mobile
+        const batteryFinderBtn = document.querySelector('.battery-finder-btn');
+        if (batteryFinderBtn) {
+            batteryFinderBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (typeof toggleBatteryFinder === 'function') {
+                    toggleBatteryFinder();
+                }
+            });
+        }
+
+        // Also handle touch events for better mobile support
+        const mobileBatteryBtn = document.querySelector('.hero-mobile-buttons .battery-finder-btn');
+        if (mobileBatteryBtn) {
+            mobileBatteryBtn.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (typeof toggleBatteryFinder === 'function') {
+                    toggleBatteryFinder();
+                }
+            });
+        }
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 900) {
+                const isClickInsideMenu = menuBar && (menuBar.contains(e.target) || menuToggle.contains(e.target));
+                const isMenuOpen = menuBar && menuBar.classList.contains('open');
+                
+                if (isMenuOpen && !isClickInsideMenu) {
+                    closeMenu();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
